@@ -1,0 +1,34 @@
+.orders-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.orders {
+  width: 350px;
+  box-shadow: 0 2px 3px 2px #cccc;
+  padding: 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+  .orders-list {
+    justify-content: space-around;
+  }
+
+  .orders {
+    width: 40%;
+  }
+}
+
+@media (max-width: 800px) {
+  .orders-list {
+    justify-content: center;
+  }
+
+  .orders {
+    width: 100%;
+  }
+}
