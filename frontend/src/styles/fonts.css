@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Montserrat Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('@/assets/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url('@/assets/fonts/Montserrat-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Baloo Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('@/assets/fonts/Baloo-Regular.woff');
+}
+
+@font-face {
+  font-family: 'Baloo Bold';
+  font-style: normal;
+  font-weight: bold;
+  src: url('@/assets/fonts/Baloo-Bold.woff');
+}
