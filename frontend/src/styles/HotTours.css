@@ -1,0 +1,488 @@
+.hot-tours-wrapper {
+  width: 100%;
+  background-image: url('@/assets/images/hot-tours-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 70px 0 85px;
+  position: relative;
+  margin-bottom: 100px;
+  overflow: hidden;
+}
+
+.hot-tours-wrapper * {
+  outline: none;
+}
+
+.hot-tours-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.21)
+  );
+}
+
+.hot-tours-wrapper-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+  left: 42.5vw;
+  transform: translateX(-50vw);
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+
+.hot-tours-item {
+  display: flex;
+  flex-direction: column;
+  min-width: 415px;
+  border-radius: 8px;
+  background-color: #fff;
+  overflow: hidden;
+  line-height: 1.2;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.05);
+}
+
+.hot-tours-item-preview {
+  position: relative;
+  height: 254px;
+  overflow: hidden;
+}
+
+.hot-tours-item-preview img {
+  width: 100%;
+  height: 100%;
+  transition: 0.7s;
+  object-fit: cover;
+  vertical-align: middle;
+  transform: scale(1.000001);
+}
+
+.hot-tours-item-preview img:hover {
+  transform: scale(1.1);
+}
+
+.hot-tours-item-badge {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  font-family: 'Montserrat Medium', serif;
+  font-weight: 600;
+  font-size: 21px;
+  padding: 5px 13px;
+  border-radius: 5px;
+  color: #fff;
+  background: #ffa133;
+  pointer-events: none;
+}
+
+.hot-tours-item-info {
+  padding: 25px 17px;
+}
+
+.hot-tours-item-title {
+  font-family: 'Montserrat Medium', serif;
+  font-size: 21px;
+  line-height: 1.2;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.hot-tours-item-title-link {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.hot-tours-item-title-link:hover {
+  color: #75c15b;
+}
+
+.hot-tours-item-pricing {
+  display: flex;
+  gap: 25px;
+  margin-top: 10px;
+}
+
+.hot-tours-item-price {
+  font-family: 'Montserrat Medium', serif;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.hot-tours-item-price-old {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.hot-tours-item-price-new {
+  color: #75c15b;
+}
+
+.hot-tours-carousel {
+  position: relative;
+  width: 860px;
+}
+
+.hot-tours-carousel-inner-wrapper {
+  overflow: hidden;
+}
+
+.hot-tours-carousel-inner {
+  transform: translateX(-445px);
+}
+
+.hot-tours-carousel-inner-items {
+  display: flex;
+  gap: 30px;
+}
+
+.hot-tours-carousel-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.hot-tours-carousel-buttons button {
+  width: 63px;
+  height: 63px;
+  border: none;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.35);
+  pointer-events: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hot-tours-carousel-buttons button div {
+  position: relative;
+  width: 20px;
+  height: 16px;
+}
+
+.hot-tours-carousel-buttons button:hover img {
+  opacity: 1;
+}
+
+.hot-tours-carousel-buttons button img {
+  opacity: 0.4;
+  transition: 0.22s;
+}
+
+.hot-tours-carousel-buttons-prev {
+  transform: rotate(180deg);
+}
+
+.hot-tours-info {
+  font-family: 'Montserrat Regular', serif;
+  color: #fff;
+  padding: 0 15px;
+  max-width: 480px;
+}
+
+.hot-tours-info div {
+  display: block;
+  gap: 30px;
+  margin-right: 400px;
+}
+
+.hot-tours-info div h2 {
+  font-size: 45px;
+  line-height: 1.24444;
+  margin: 0;
+}
+
+.hot-tours-info div p {
+  font-family: 'Balsamiq Sans', sans-serif;
+  font-size: 70px;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+.hot-tours-info h4 {
+  font-family: 'Montserrat Medium', serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.7;
+  margin: 0;
+}
+.hot-tours-toolbar-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hot-tours-toolbar {
+  position: relative;
+  width: 220px;
+  height: 200px;
+}
+.hot-tours-toolbar-inner {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+.hot-tour-toolbar-0 {
+  display: block;
+}
+.hot-tour-toolbar-1 {
+  display: none;
+}
+.hot-tour-toolbar-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.hot-tour-toolbar-sale {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 7px;
+  color: #fff;
+  background: #ffa133;
+}
+.hot-tour-toolbar-info {
+  height: 0;
+  margin-top: auto;
+  overflow: hidden;
+  position: absolute;
+  padding: 10px;
+  bottom: 0;
+  z-index: 1;
+  width: 150px;
+  transition: 0.5s;
+  color: #fff;
+}
+
+.hot-tour-toolbar-img:hover ~ .hot-tour-toolbar-info,
+.hot-tour-toolbar-info:hover {
+  height: 120px;
+}
+.hot-tour-toolbar-link {
+  color: #fff;
+  text-decoration: none;
+}
+.hot-tour-toolbar-link:hover {
+  text-decoration: underline;
+}
+.hot-tour-toolbar-old-price {
+  color: #c4c4c4;
+  text-decoration: line-through;
+  margin-right: 8px;
+  font-weight: 600;
+}
+.hot-tour-toolbar-price {
+  color: #75c15b;
+  font-weight: 600;
+}
+.hot-tours-toolbar-dots {
+  display: flex;
+  margin: 25px auto 0;
+  justify-content: space-around;
+}
+.hot-tours-toolbar-dots div {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.hot-tours-toolbar-dot-active {
+  background-color: #75c15b;
+}
+.hot-tours-toolbar-dot-hide {
+  background-color: #c4c4c4;
+}
+.hot-tours-toolbar-dot-hide:hover {
+  background-color: #75c15b;
+}
+@media screen and (max-width: 1300px) {
+  .hot-tours-wrapper-inner {
+    left: 50%;
+  }
+
+  .hot-tours-carousel {
+    width: 415px;
+  }
+
+  .hot-tours-carousel-inner {
+    transform: translateX(-445px);
+  }
+
+  .hot-tours-info h4 {
+    font-size: 21px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hot-tours-wrapper-inner {
+    flex-direction: column-reverse;
+    align-items: start;
+  }
+
+  .hot-tours-carousel {
+    width: 660px;
+    margin: 0 auto;
+  }
+
+  .hot-tours-carousel-inner {
+    transform: translateX(-345px);
+  }
+
+  .hot-tours-item {
+    min-width: 315px;
+  }
+
+  .hot-tours-item-preview {
+    height: 192px;
+  }
+
+  .hot-tours-item-badge {
+    top: 20px;
+    left: 20px;
+  }
+
+  .hot-tours-info {
+    max-width: 660px;
+    margin: 0 auto;
+  }
+
+  .hot-tours-info div {
+    display: block;
+  }
+  .hot-tour-toolbar-info {
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hot-tours-carousel-buttons {
+    top: 56%;
+    right: -10px;
+    gap: 10px;
+  }
+
+  .hot-tours-carousel-buttons button {
+    width: 45px;
+    height: 45px;
+  }
+
+  .hot-tours-carousel-buttons button div {
+    width: 16px;
+  }
+
+  .hot-tours-carousel {
+    width: 510px;
+  }
+
+  .hot-tours-carousel-inner {
+    transform: translateX(-250px);
+  }
+
+  .hot-tours-item {
+    min-width: 230px;
+  }
+
+  .hot-tours-item-preview {
+    height: 140px;
+  }
+
+  .hot-tours-info div h2 {
+    font-size: 28px;
+  }
+
+  .hot-tours-info div p {
+    font-size: 54px;
+  }
+
+  .hot-tours-info h4 {
+    font-size: 19px;
+  }
+
+  .hot-tours-info {
+    max-width: 465px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hot-tours-carousel-buttons {
+    top: 50%;
+    right: -20px;
+    gap: 16px;
+  }
+
+  .hot-tours-carousel-buttons button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .hot-tours-carousel-buttons button div {
+    width: 18px;
+  }
+
+  .hot-tours-carousel {
+    width: 85vw;
+  }
+
+  .hot-tours-carousel-inner {
+    transform: translateX(0);
+  }
+
+  .hot-tours-carousel-inner-items {
+    justify-content: center;
+  }
+
+  .hot-tours-item:last-child {
+    display: none;
+  }
+
+  .hot-tours-item {
+    min-width: 100%;
+  }
+
+  .hot-tours-item-preview {
+    height: 254px;
+  }
+
+  .hot-tours-info {
+    max-width: 85vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hot-tours-info div p {
+    font-size: 45px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .hot-tours-info div {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+}
