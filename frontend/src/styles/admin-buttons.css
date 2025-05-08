@@ -1,0 +1,160 @@
+:root {
+  --color-edit: #2e8b57;
+  --color-delete: #ff2400;
+  --color-add: #0047ab;
+}
+
+.admin-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-buttons .admin-button-add {
+  width: 100%;
+}
+
+.admin-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 6px 7px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  outline: none;
+  transition: all 200ms linear;
+  z-index: 2;
+}
+
+.admin-button:hover {
+  background-color: transparent;
+}
+.admin-button.admin-button-outline {
+  background-color: transparent;
+}
+
+.admin-button-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  transition: fill 200ms linear;
+}
+
+.admin-button-mini {
+  padding: 4px 6px !important;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.admin-button-mini.admin-button-icon {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+@media screen and (max-width: 992px) {
+  .admin-button {
+    font-size: 1rem;
+  }
+  .admin-button-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .admin-button {
+    font-size: 0.9rem;
+  }
+  .admin-button-icon {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+}
+
+.admin-button-edit {
+  border: 3px solid var(--color-edit);
+  background-color: var(--color-edit);
+}
+.admin-button-edit:hover {
+  color: var(--color-edit);
+}
+.admin-button:hover.admin-button-edit svg path {
+  fill: var(--color-edit);
+}
+.admin-button-outline.admin-button-edit {
+  color: var(--color-edit);
+}
+.admin-button-outline:hover.admin-button-edit {
+  color: #fff;
+  background-color: var(--color-edit);
+}
+.admin-button-outline.admin-button-edit svg path {
+  fill: var(--color-edit);
+}
+.admin-button-outline:hover.admin-button-edit svg path {
+  fill: #fff;
+}
+
+.admin-button-delete {
+  border: 3px solid var(--color-delete);
+  background-color: var(--color-delete);
+}
+.admin-button-delete:hover {
+  color: var(--color-delete);
+}
+.admin-button:hover.admin-button-delete svg path {
+  fill: var(--color-delete);
+}
+.admin-button-outline.admin-button-delete {
+  color: var(--color-delete);
+}
+.admin-button-outline:hover.admin-button-delete {
+  color: #fff;
+  background-color: var(--color-delete);
+}
+.admin-button-outline.admin-button-delete svg path {
+  fill: var(--color-delete);
+}
+.admin-button-outline:hover.admin-button-delete svg path {
+  fill: #fff;
+}
+
+.admin-button-add {
+  border: 3px solid var(--color-add);
+  background-color: var(--color-add);
+}
+.admin-button-add:hover {
+  color: var(--color-add);
+}
+.admin-button:hover.admin-button-add svg path {
+  fill: var(--color-add);
+}
+.admin-button-outline.admin-button-add {
+  color: var(--color-add);
+}
+.admin-button-outline:hover.admin-button-add {
+  color: #fff;
+  background-color: var(--color-add);
+}
+.admin-button-outline.admin-button-add svg path {
+  fill: var(--color-add);
+}
+.admin-button-outline:hover.admin-button-add svg path {
+  fill: var(--color-add);
+}
+
+.admin-button-light-text {
+  color: #fff !important;
+}
+.admin-button:hover.admin-button-light-text svg path {
+  fill: #fff;
+}
