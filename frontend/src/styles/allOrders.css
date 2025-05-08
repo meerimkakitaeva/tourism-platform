@@ -1,0 +1,235 @@
+.orders-page {
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+
+.orders-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.boards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.order-board {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background: #f7f8f9;
+  border-radius: 12px;
+  width: 300px;
+  min-width: 300px;
+  height: 500px;
+}
+
+.board-title {
+  margin: 0 0 15px;
+}
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.order-items::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.order-items::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #222;
+}
+
+.order-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #ffffff;
+  padding: 28px 10px 10px;
+  width: 100%;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 12px;
+  transition: 0.2s;
+  cursor: grab;
+}
+
+.order-item:hover {
+  background-color: #75c15b;
+}
+
+.order-item:active {
+  background-color: #ffa133;
+  border-radius: 0;
+}
+
+.order-selected {
+  background-color: #ffa133 !important;
+}
+
+.user-info-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.user-info-row span {
+  max-width: 48%;
+  white-space: nowrap;
+  overflow: hidden;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+.user-info-row span:hover {
+  max-width: unset;
+  background-color: white;
+  white-space: unset;
+  padding: 0 4px;
+  overflow: unset;
+}
+
+.info-none:hover {
+  background-color: unset !important;
+  padding: unset !important;
+  border-radius: unset !important;
+}
+
+.user-info-row span:nth-child(1) {
+  text-align: left;
+}
+
+.user-info-row span:nth-child(2) {
+  text-align: right;
+}
+
+.order-datetime {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  font-size: 10px;
+  opacity: 0.5;
+}
+
+.send-email-order,
+.remove-order {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 5px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.send-email-order {
+  background-image: url('@/assets/images/envelope.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: 25px;
+}
+
+.remove-order {
+  right: 4px;
+  font-size: 28px;
+  line-height: 14px;
+}
+
+.send-email-order:hover,
+.remove-order:hover {
+  scale: 1.1;
+}
+
+.order-status-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+}
+
+.order-status-loading-inner {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1120px) {
+  .boards {
+    justify-content: unset;
+  }
+
+  .order-board {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .order-item:hover {
+    background-color: #ffffff;
+  }
+
+  .user-info-row span:hover {
+    background-color: #75c15b;
+  }
+}
+
+@media (max-width: 768px) {
+  .orders-page {
+    margin: 100px 0 50px;
+  }
+
+  .order-board {
+    height: 400px;
+  }
+}
+
+@media (max-width: 500px) {
+  .order-board {
+    padding: 8px;
+    width: 200px;
+    min-width: 200px;
+  }
+
+  .order-item {
+    font-size: 10px;
+    padding: 25px 6px 8px;
+  }
+
+  .order-datetime {
+    top: 5px;
+    left: 5px;
+  }
+
+  .remove-order {
+    right: 2px;
+    top: 4px;
+  }
+}
