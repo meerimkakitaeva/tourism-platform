@@ -1,0 +1,103 @@
+.guide-card {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.guide-card__image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.guide-card__image img {
+  object-fit: cover;
+}
+
+.guide-card__content {
+  padding: 16px;
+  text-align: center;
+}
+
+.guide-card__name {
+  margin: 0;
+  font-size: 1.2em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.guide-card__role {
+  margin: 8px 0;
+  color: #666;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.guide-card__description {
+  margin-bottom: 0;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.guide-card__link {
+  display: inline-block;
+  width: 40%;
+  text-decoration: none;
+  color: #fff;
+  background-color: #75c15b;
+  padding: 12px 10px;
+  text-transform: uppercase;
+  transition: 250ms all ease-in-out;
+  border-radius: 4px;
+  border: 1px solid #75c15b;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.guide-card-orders__buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.guide-card__btn {
+  margin: 10px 0;
+}
+
+.guide-card__btn button {
+  background: #8c0404;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: 0.2s;
+}
+.guide-card__btn button:hover {
+  text-decoration: underline;
+}
+@media (max-width: 640px) {
+  .guide-card__link {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .guide-card-orders__info {
+    font-size: 14px;
+  }
+  .guide-card {
+    width: 65%;
+  }
+}
+
+@media (max-width: 400px) {
+  .guide-card__link {
+    font-size: 12px;
+  }
+}
