@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap');
+
+body {
+  font-family: Montserrat, serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+  height: 100%;
+}
+
+.google-map {
+  margin-top: 100px;
+  width: 100%;
+}
+
+.google-map iframe {
+  width: 100%;
+  border: 0;
+}
+
+.btn-tour-edit {
+  background: #297a0d;
+  border: 1px solid transparent;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.btn-delete-tour {
+  background: #8c0404;
+  margin: 0;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: 0.2s;
+}
+
+.btn-publish-tour {
+  background: #0083ff;
+  margin: 0 2px;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: 0.2s;
+}
+
+.btn-publish-tour:hover {
+  background: #fff;
+  color: #0083ff;
+  border: 1px solid #0083ff;
+}
+
+.btn-tour-edit:hover {
+  background: #fff;
+  color: #297a0d;
+  border: 1px solid #297a0d;
+}
+
+.btn-delete-tour:hover {
+  background: #fff;
+  color: #8c0404;
+  border: 1px solid #8c0404;
+}
+
+.btn-tour-edit:active {
+  box-shadow: 1px 1px 5px #297a0d;
+}
+
+.btn-delete-tour:active {
+  box-shadow: 1px 1px 5px #8c0404;
+}
+
+.btn-publish-tour:active {
+  box-shadow: 1px 1px 5px #0083ff;
+}
+
+@media (max-width: 768px) {
+  .buttons-tour button {
+    font-size: 11px;
+    padding: 8px 15px;
+  }
+}
