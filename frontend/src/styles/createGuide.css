@@ -1,0 +1,80 @@
+.user-id-input {
+  position: relative;
+}
+
+.matched-users {
+  position: absolute;
+  top: 100%;
+  background: #f6f6f6;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 50px;
+  padding: 5px;
+  z-index: 1;
+}
+
+.matched-users-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: black;
+  overflow-y: auto;
+  max-height: 300px;
+  box-sizing: border-box;
+}
+
+.matched-user {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1;
+  background: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.matched-user h4 {
+  margin: 0;
+}
+
+.matched-user:hover {
+  background: #eeeeee;
+}
+
+.languages-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.languages-top .text-field {
+  flex-grow: 1;
+}
+
+.languages-top button {
+  align-self: flex-end;
+  margin: 0 !important;
+  width: unset;
+}
+
+.languages-bottom {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.reset-languages {
+  padding: 3px 10px;
+  border-radius: 6px;
+  color: white;
+  background-color: #8c0404;
+  border: 0;
+  cursor: pointer;
+}
+
+.create-guide .form-tour-btn {
+  margin: 0;
+}

@@ -1,0 +1,52 @@
+.editor-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 11;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: openModal 0.15s linear;
+}
+
+.editor-modal-open {
+  display: flex;
+}
+
+.editor-modal-inner {
+  width: 420px;
+  padding: 25px 35px;
+  background-color: #ffffff;
+  margin-bottom: 50px;
+  border-radius: 12px;
+}
+
+.editor-modal-inner input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.editor-modal-inner h2 {
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+}
+
+@keyframes openModal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .editor-modal-inner {
+    width: 80%;
+    padding: 10px 20px;
+  }
+}
