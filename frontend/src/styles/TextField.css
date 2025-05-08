@@ -1,0 +1,283 @@
+.text-field {
+  position: relative;
+  font-family: 'Montserrat Regular', serif;
+}
+
+.text-field-label {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  pointer-events: none;
+  transition: all 0.25s linear;
+  will-change: transform;
+}
+
+.text-field-label-hidden {
+  opacity: 0;
+}
+
+.input-phone-number::placeholder input:focus::placeholder {
+  opacity: 0;
+}
+
+.input-phone-number::placeholder {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  pointer-events: none;
+  transition: all 0.25s linear;
+  will-change: transform;
+  color: #000000;
+}
+
+.input-phone-number input:focus {
+  font-family: 'Montserrat Regular', serif;
+  font-size: 18px;
+  border: 0;
+  border-bottom: 1px solid #c4c4c4;
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+  outline: 0;
+}
+
+.PhoneInputCountryIcon {
+  width: initial !important;
+  height: initial !important;
+}
+
+.PhoneInputCountryIcon:focus {
+  width: initial !important;
+  height: initial !important;
+}
+
+.PhoneInputCountry:focus {
+  position: absolute !important;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.PhoneInputCountry {
+  position: absolute !important;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.PhoneInputInput {
+  padding-left: 40px;
+}
+
+.PhoneInputInput:focus-visible::placeholder {
+  opacity: 0;
+}
+
+.PhoneInputInput:focus-visible {
+  font-family: 'Montserrat Regular', serif;
+  font-size: 18px;
+  border: 0;
+  border-bottom: 1px solid #c4c4c4;
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+  outline: 0;
+}
+
+.PhoneInputInput::placeholder {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  pointer-events: none;
+  transition: all 0.25s linear;
+  will-change: transform;
+  color: #000000;
+}
+
+.PhoneInputInput {
+  font-family: 'Montserrat Regular', serif;
+  font-size: 18px;
+  border: 0;
+  border-bottom: 1px solid #c4c4c4;
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+  outline: 0;
+  min-height: 60px;
+}
+
+.text-field-input {
+  padding: 11px 19px 11px 40px;
+  font-family: 'Montserrat Regular', serif;
+  font-size: 18px;
+  border: 0;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #c4c4c4;
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+  outline: 0;
+  min-height: 60px;
+}
+
+.text-field-input-guides {
+  width: 100%;
+  padding: 11px 19px 11px 40px;
+  font-family: 'Montserrat Regular', serif;
+  font-size: 18px;
+  border: 0;
+  border-bottom: 1px solid #c4c4c4;
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+  outline: 0;
+  min-height: 60px;
+}
+
+.text-field-input-success {
+  border-bottom: 1px solid #62ef2b;
+}
+
+.text-field-input-error {
+  border-bottom: 1px solid #f5543f;
+}
+
+.text-field-img {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.text-field-span {
+  position: absolute;
+  right: 0;
+  bottom: -13px;
+  font-size: 9px;
+  font-family: 'Montserrat Regular', serif;
+  letter-spacing: 0;
+  line-height: 12px;
+  transition: all 0.3s linear;
+  color: #f5543f;
+}
+
+.day-picker {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  background-color: #222;
+  z-index: 3;
+  border-radius: 10px;
+  color: #fff;
+  transition: all 0.25s ease-in-out;
+}
+
+.day-picker-hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
+  background-color: blue !important;
+  color: #fff !important;
+}
+
+.my-selected:not([disabled]) {
+  font-weight: bold;
+  border: 2px solid #fff;
+}
+
+.my-today {
+  font-weight: bold !important;
+  color: blue !important;
+}
+
+@media (max-width: 1020px) {
+  .one-tour-order-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px !important;
+    padding: 25px 35px 40px !important;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .one-tour-order-form-inputs {
+    max-width: unset !important;
+    width: 100%;
+  }
+
+  .one-tour-order-form-inputs .text-field {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .day-picker {
+    transform: scale(0.8) translate(-60%, 70px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .text-field-input-no-icon {
+    padding: 8px 15px 8px 20px;
+    min-height: 45px;
+  }
+
+  .text-field-label-no-icon {
+    left: 20px;
+  }
+}
+
+@media (max-width: 475px) {
+  .one-tour-order-form-title {
+    margin-bottom: 20px;
+  }
+
+  .text-field-label,
+  .css-1jqq78o-placeholder,
+  .one-tour-order-form-inputs input {
+    font-size: 14px;
+  }
+
+  .text-field-input {
+    padding: 5px 19px 5px 35px;
+  }
+
+  .text-field-select {
+    padding-bottom: 0;
+    padding-top: 10px;
+  }
+
+  .one-tour-order-form-btn {
+    margin-top: 30px;
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+
+  .one-tour-inner-gallery2 {
+    gap: 10px;
+  }
+
+  .one-tour-inner-gallery2 img {
+    width: 120px;
+    height: 120px;
+  }
+}
