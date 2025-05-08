@@ -1,0 +1,792 @@
+.about-page-edit-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 290px;
+  border-radius: 10px;
+  background-color: #fff;
+  z-index: 4;
+  padding: 10px 30px;
+  animation: fading 300ms linear;
+}
+
+@keyframes fading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.about-page-edit-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2229;
+  z-index: 3;
+}
+
+.about-page-edit-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.about-page-edit-modal-header img {
+  width: 25px;
+  height: 25px;
+}
+
+.about-page-edit-modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.about-page-edit-modal-close-btn span {
+  cursor: pointer;
+  position: absolute;
+  height: 1px;
+  width: 25px;
+  background-color: #000;
+  left: 5px;
+}
+
+.about-page-edit-modal-close-btn span:nth-child(1) {
+  transform: rotate(-45deg);
+}
+
+.about-page-edit-modal-close-btn span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.about-page-edit-modal-text-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-page-edit-modal-title,
+.about-page-edit-modal-description {
+  border: 3px solid #222;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: 'Montserrat Regular', sans-serif;
+  font-size: 1rem;
+  resize: none;
+  transition: 0.4s;
+  outline: none;
+}
+
+.about-page-edit-modal-title:focus,
+.about-page-edit-modal-description:focus {
+  border: 3px solid #75c15b;
+  box-shadow: 0 0 3px #75c15b;
+}
+
+.about-page-edit-modal-description::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+.about-page-edit-modal-description::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #222;
+}
+
+.about-page-edit-modal-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 500px;
+  transition-property: background-color, border-color, color, box-shadow, filter;
+  transition-duration: 0.3s;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  width: 100px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 16px 14px 18px;
+  color: #75c15b;
+  box-shadow: inset 0 0 0 2px #75c15b;
+  background-color: transparent;
+  height: 40px;
+}
+
+.about-page-edit-modal-btn:hover {
+  color: #fff;
+  background-color: #75c15b;
+}
+
+.about-page-edit-modal-btn:disabled {
+  pointer-events: auto;
+  cursor: not-allowed;
+  box-shadow: none;
+  color: #fff;
+  background-color: #222;
+  border-radius: 50px;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+  margin-left: 32.5px;
+  transition: all 250ms linear;
+}
+
+.about-page-edit-modal-btn:disabled .spinner {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  box-sizing: border-box;
+  border-top: 4px solid #75c15b;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-radius: 100%;
+  animation: spin 0.6s ease-out infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.about-page-edit-btn {
+  position: absolute;
+  width: 50px;
+  height: 40px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  transition:
+    scale 100ms linear,
+    right 250ms linear;
+}
+
+.about-page-edit-btn:hover {
+  scale: 1.1;
+}
+
+.about-page-edit-btn img {
+  width: 100%;
+  height: 100%;
+}
+
+.about-page-edit-btn[name='main'] {
+  top: 50%;
+  transform: translateY(-50%);
+  left: -50px;
+}
+
+.about-page-edit-btn[name='offer'] {
+  top: 50%;
+  transform: translateY(-50%);
+  right: -50px;
+}
+
+.about-page-edit-btn[name='posts'] {
+  top: 0;
+  right: 0;
+}
+
+.about-page-advantages-card:hover .about-page-edit-btn[name='posts'] {
+  right: 0;
+}
+
+.about-page-edit-btn[name='review'] {
+  top: 50%;
+  transform: translateY(-50%);
+  right: -50px;
+}
+
+.about-page {
+  overflow: hidden;
+}
+
+.about-page-top {
+  position: relative;
+  height: 500px;
+  z-index: 1;
+}
+
+.about-page-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  filter: brightness(85%);
+}
+
+.about-page-top-info {
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about-page-top-line {
+  position: absolute;
+  top: 0;
+  width: 70px;
+  height: 15px;
+  overflow: hidden;
+}
+
+.about-page-top-line img {
+  width: 100%;
+  height: 100%;
+  scale: 2;
+  object-fit: cover;
+}
+
+.about-page-top-title {
+  position: relative;
+  color: #ffffff;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 1.24444;
+  text-shadow: 0 4px 4px rgba(21, 21, 21, 0.25);
+  margin-bottom: 0;
+}
+
+.about-page-top-txt {
+  margin-top: 26px;
+  font-size: 18px;
+  line-height: 1.77778;
+  text-align: center;
+  color: #ffffff;
+}
+
+.about-page-tour {
+  position: relative;
+  background-color: #ffffff;
+}
+
+.about-page-tours {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 70px;
+}
+
+.about-page-tours-left {
+  width: 50%;
+}
+
+.about-page-tours-title {
+  position: relative;
+  max-width: 370px;
+  font-size: 30px;
+  line-height: 1.33333;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  color: #000000;
+}
+
+.about-page-tours-txt {
+  font-size: 18px;
+  margin-top: 50px;
+  line-height: 1.75;
+  color: #808080;
+}
+
+.about-page-tours-btn {
+  margin-top: 40px;
+  padding: 17px 30px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #ffffff;
+  background-color: #75c15b;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: 250ms all ease-in-out;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #75c15b;
+}
+
+.about-page-tours-btn:hover {
+  background-color: #ffa133;
+  border: 1px solid #ffa133;
+}
+
+.about-page-tours-img {
+  width: 450px;
+  height: 500px;
+}
+
+.about-page-advantages {
+  margin: 100px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.about-page-advantages-card {
+  position: relative;
+  width: 250px;
+}
+
+.about-page-advantages-title {
+  font-size: 24px;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  color: #000000;
+}
+
+.about-page-advantages-title span {
+  font-weight: 600;
+  color: #75c15b;
+  font-size: 24px;
+  line-height: 1.25;
+  margin-right: 5px;
+}
+
+.about-page-advantages-txt {
+  color: #353535;
+  font-size: 16px;
+  line-height: 1.75;
+  font-weight: 400;
+}
+
+.about-page-advantages-image {
+  width: 50px;
+  height: 50px;
+  transition: 150ms all ease-in-out;
+}
+
+.about-page-clients {
+  background-color: #ffffff;
+}
+
+.about-page-clients-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.about-page-clients-title {
+  position: relative;
+  font-size: 30px;
+  line-height: 1.33333;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  color: #000000;
+}
+
+.about-page-clients-main div {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #808080;
+  margin-bottom: 50px;
+}
+
+.about-page-clients-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-page-clients-card {
+  width: 44%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 40px 25px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 9px 28px 0 rgba(0, 0, 0, 0.2);
+}
+
+.about-page-clients-card-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.about-page-clients-card-img {
+  border-radius: 50%;
+  max-width: 84px;
+  max-height: 84px;
+  object-fit: cover;
+}
+
+.about-page-clients-card-title {
+  margin-left: 22px;
+  font-size: 18px;
+  line-height: 1.44444;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  color: #000000;
+}
+
+.about-page-clients-card-txt {
+  font-size: 18px;
+  color: #000000;
+  line-height: 1.72222;
+  min-height: 30px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.about-page-clients-card-date {
+  font-size: 18px;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.about-page-team {
+  margin: 100px 0 25px;
+  text-align: center;
+}
+
+.about-page-team-title {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #000000;
+  line-height: 1.33333;
+}
+
+.about-page-team-txt {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #808080;
+  line-height: 1.75;
+}
+
+.about-page-team-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 80px;
+  margin-top: 40px;
+}
+
+.about-page-team-card {
+  width: 280px;
+  border-radius: 4px;
+  text-align: center;
+  padding-bottom: 20px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.25);
+}
+
+.about-page-team-card-img {
+  width: 280px;
+  height: 200px;
+}
+
+.about-page-team-card-position {
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.03em;
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 1.44444;
+}
+
+.about-page-team-card-title {
+  font-weight: 600;
+  font-size: 24px;
+  margin-top: 5px;
+  color: #000000;
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+
+.about-page-team-card-phone {
+  color: #75c15b;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: 150ms all ease-in-out;
+  background-image: url('./../assets/images/call-icon.svg');
+  background-repeat: no-repeat;
+  background-position: left 15% center;
+  background-size: 15px;
+}
+
+.about-page-team-card-phone:hover {
+  color: #000000;
+}
+
+.about-page-partners {
+  background-color: #fff;
+  padding: 50px 0 100px;
+}
+
+.about-page-partners-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.about-page-partners-card {
+  margin: 0 auto;
+  font-size: 22px;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.5;
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.22s;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.about-page-partners-card:hover {
+  box-shadow: 0 9px 58px 0 rgba(0, 0, 0, 0.2);
+  opacity: inherit;
+}
+.about-page-partners-card-link {
+  text-decoration: none;
+  color: #000;
+}
+.about-page-partners-card-link img {
+  width: 100%;
+  height: 100%;
+}
+.about-page-guide {
+  margin: 100px 0 50px;
+}
+
+.about-page-guide-text-wrap {
+  margin-bottom: 40px;
+}
+
+.about-page-guide-wrap {
+  text-align: center;
+}
+
+.about-page-slider-wrap {
+  position: relative;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  margin: -40px 0;
+}
+
+.about-page-team-link {
+  text-decoration: none;
+  background: #75c15b;
+  padding: 10px;
+  color: #fff;
+  width: 160px;
+  margin: 15px auto;
+  display: block;
+}
+.about-page-team-link:hover {
+  text-decoration: underline;
+}
+.about-page-team-btns {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.become-partner {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: green;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .about-page-edit-btn[name='posts'] {
+    right: -50px;
+  }
+
+  .about-page-advantages-card {
+    overflow-x: hidden;
+    padding-top: 5px;
+  }
+  .about-page-tours-img {
+    height: 400px;
+  }
+
+  .about-page-advantages-card:hover .about-page-advantages-image {
+    transition: transform 0.4s;
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 930px) {
+  .about-page-clients-cards {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-page-clients-card {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+
+  .about-page-tours {
+    flex-direction: column;
+  }
+
+  .about-page-tours-left {
+    width: 100%;
+  }
+
+  .about-page-tours-img-wrap {
+    text-align: center;
+  }
+
+  .about-page-team-cards {
+    justify-content: space-around;
+  }
+
+  .about-page-team-card {
+    margin-bottom: 30px;
+  }
+  .about-page-partners-card {
+    margin-bottom: 20px;
+  }
+  .about-page-clients-main div {
+    text-align: center;
+  }
+  .about-page-clients-main {
+    margin-bottom: 50px;
+  }
+  .about-page-team,
+  .about-page-guide {
+    margin-top: 50px;
+  }
+  .about-page-top-title {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .about-page-edit-modal {
+    width: 70vw !important;
+  }
+  .about-page-clients-card {
+    width: 82%;
+  }
+  .about-page-advantages-title {
+    font-size: 20px;
+  }
+  .about-page-advantages-image {
+    width: 30px;
+    height: 30px;
+  }
+  .about-page-advantages-txt {
+    font-size: 14px;
+  }
+  .about-page-clients-main {
+    margin-bottom: 30px;
+  }
+  .about-page-tours-btn {
+    font-size: 12px;
+    padding: 15px 20px;
+  }
+  .about-page-team-card-title {
+    font-size: 20px;
+  }
+  .about-page-team-card-position {
+    font-size: 16px;
+  }
+  .about-page-team-card-phone {
+    font-size: 14px;
+    background-size: 13px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .about-page-edit-btn[name='review'] {
+    position: static;
+    transform: translateY(0);
+  }
+  .about-page-top-title {
+    font-size: 36px;
+  }
+  .about-page-top-txt,
+  .about-page-tours-txt,
+  .about-page-team-txt {
+    font-size: 16px;
+  }
+  .about-page-tours-title,
+  .about-page-clients-title,
+  .about-page-team-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 470px) {
+  .about-page-tours-img {
+    width: 100%;
+  }
+
+  .about-page-team {
+    text-align: center;
+  }
+
+  .about-page-team-cards {
+    justify-content: center;
+  }
+
+  .about-page-partners {
+    margin: 60px 0;
+  }
+  .about-page-team-link {
+    padding: 8px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .about-page-edit-btn[name='offer'] {
+    position: static;
+    transform: translateY(0);
+  }
+}
