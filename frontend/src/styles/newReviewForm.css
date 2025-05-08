@@ -1,0 +1,68 @@
+.review-form-title {
+  font-weight: 400;
+  margin: 45px 0 0;
+  font-size: 30px;
+}
+
+.review-form {
+  padding: 33px 42px 40px;
+  margin: 45px 0 90px;
+  border-radius: 6px;
+  background: white;
+  max-width: 720px;
+}
+
+.tour-rating-range,
+.tour-rating-stars {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.tour-rating-stars {
+  line-height: 16px;
+  font-size: 14px;
+  margin-left: 5px;
+  color: #c4c4c4;
+  cursor: pointer;
+}
+
+.rated-star {
+  color: #ffa133;
+}
+
+.review-form textarea {
+  margin-top: 30px;
+  padding: 11px 20px 11px 38px;
+  width: 100%;
+  background-image: url('../assets/images/input-chat-message.svg');
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: 8px 13px;
+  min-height: 100px;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  line-height: 22px;
+}
+
+.review-form-textarea {
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.review-form button {
+  width: 160px;
+  padding: 17px 30px;
+  margin-top: 55px;
+  background: #75c15b;
+  text-transform: uppercase;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.review-form button:hover {
+  background: #ffa133;
+}
