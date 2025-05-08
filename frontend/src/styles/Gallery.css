@@ -1,0 +1,245 @@
+.one-tour-gallery {
+  padding: 100px 0;
+}
+
+.one-tour-gallery h2 {
+  font-size: 30px;
+  line-height: 1.33333;
+  font-weight: 400;
+}
+
+.one-tour-photos {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.one-tour-photo {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+}
+.one-tour-photo img {
+  transition: all 0.3s;
+}
+
+.one-tour-photo:hover img {
+  filter: brightness(80%);
+}
+
+.one-tour-photo:hover::before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  background-image: url('../assets/images/loupe-icon.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.gallery-imgs {
+  object-fit: cover;
+}
+.backdrop-gallery {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.backdrop-gallery-open {
+  animation: openGallery 0.5s linear;
+}
+
+.backdrop-gallery-btn {
+  align-self: flex-end;
+  font-size: 28px;
+  font-weight: 600;
+  color: #cccccc;
+  padding-right: 30px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.backdrop-gallery-btn:hover {
+  color: #fff;
+}
+.backdrop-gallery-mainImg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-img {
+  height: auto;
+  animation: switchImage 0.5s linear;
+  object-fit: cover;
+}
+.backdrop-gallery-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.backdrop-gallery-inner div {
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.backdrop-gallery-img-current {
+  border: 2px solid #75c15b;
+}
+
+.backdrop-gallery-icons {
+  background-color: rgba(236, 235, 235, 0.65);
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.backdrop-gallery-icons:hover {
+  background-color: rgba(236, 235, 235, 0.85);
+}
+.backdrop-gallery-icons:hover .backdrop-gallery-icon-svg {
+  fill: #fff;
+}
+.backdrop-gallery-icon-left {
+  margin-right: 10px;
+}
+.backdrop-gallery-icon-svg {
+  width: 24px;
+  height: 24px;
+  fill: #999;
+  transition: all 0.5s;
+}
+.backdrop-gallery-icon-right {
+  margin-left: 10px;
+}
+@media (max-width: 1020px) {
+  .one-tour-gallery {
+    padding-top: 20px;
+  }
+
+  .one-tour-photos {
+    justify-content: unset;
+  }
+  .modal-img {
+    width: 700px;
+  }
+}
+@media (max-width: 850px) {
+  .modal-img {
+    width: 600px;
+  }
+}
+@media (max-width: 768px) {
+  .one-tour-photos {
+    width: 180px;
+    height: 180px;
+  }
+  .modal-img {
+    width: 500px;
+  }
+  .backdrop-gallery-btn {
+    font-size: 25px;
+  }
+  .backdrop-gallery-icons {
+    height: 30px;
+    width: 30px;
+  }
+  .backdrop-gallery-icon-svg {
+    width: 22px;
+    height: 22px;
+  }
+  .backdrop-gallery-icons {
+    height: 28px;
+    width: 28px;
+  }
+  .backdrop-gallery-open {
+    padding-top: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .modal-img {
+    width: 400px;
+    position: relative;
+  }
+  .backdrop-gallery-inner div {
+    width: 80px;
+    height: 80px;
+  }
+  .backdrop-gallery-icons {
+    position: absolute;
+    z-index: 1;
+    background: transparent;
+  }
+  .backdrop-gallery-icon-svg {
+    width: 25px;
+    height: 20px;
+  }
+  .backdrop-gallery-icon-left {
+    margin-right: 6px;
+    left: 35px;
+  }
+  .backdrop-gallery-icon-right {
+    margin-left: 6px;
+    right: 35px;
+  }
+  .backdrop-gallery-icons:hover {
+    background-color: transparent;
+  }
+  .backdrop-gallery-btn {
+    font-size: 23px;
+  }
+  .backdrop-gallery-open {
+    padding-top: 0;
+  }
+}
+@media (max-width: 475px) {
+  .one-tour-gallery h2 {
+    text-align: center;
+  }
+
+  .one-tour-photos {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .modal-img {
+    width: 300px;
+  }
+}
+
+@keyframes openGallery {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes switchImage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

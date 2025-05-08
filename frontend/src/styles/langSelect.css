@@ -1,0 +1,78 @@
+.form-lang {
+  position: absolute;
+  top: 80px;
+  left: -40px;
+  padding: 5px 10px 0 20px;
+  transition: 0.2s;
+}
+
+.form-lang-open,
+.form-lang:hover {
+  left: 0;
+}
+
+.form-lang-value {
+  display: inline-block;
+}
+
+.form-lang-value img,
+.form-lang-options img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.form-lang-options-open img:hover {
+  transform: scale(1.2);
+}
+
+.form-lang-options-open img:active {
+  transform: scale(0.95);
+}
+
+.form-lang-options {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  padding: 0 15px 3px 25px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  transition: 0.2s;
+  overflow: hidden;
+}
+
+.form-lang-options-closed {
+  top: 110%;
+  opacity: 0;
+  height: 0;
+  animation: close 0.1s linear;
+}
+
+.form-lang-options-open {
+  top: 100%;
+  height: unset;
+  opacity: 1;
+}
+
+@media (max-width: 992px) {
+  .form-lang {
+    top: 65px;
+  }
+}
+
+@keyframes close {
+  0% {
+    top: 100%;
+    opacity: 1;
+    height: unset;
+  }
+  100% {
+    top: 110%;
+    opacity: 0;
+    height: 0;
+  }
+}
