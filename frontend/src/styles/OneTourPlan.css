@@ -1,0 +1,147 @@
+.one-tour-plan {
+  padding: 100px 0;
+}
+
+.one-tour-plan-list {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.plan-day {
+  position: relative;
+  cursor: pointer;
+}
+
+.plan-day-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-left: 60px;
+}
+
+.plan-day-body-arrow {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: 15px;
+  width: 1px;
+  bottom: -60px;
+  background: rgba(196, 196, 196, 0.75);
+}
+
+.plan-day-title {
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.plan-day-description {
+  color: #808080;
+  overflow: hidden;
+  max-height: 300px;
+  transition: 0.5s ease-out;
+}
+
+.plan-day-checkbox {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(196, 196, 196, 0.5);
+  z-index: 1;
+}
+
+.plan-day-checkbox-inner {
+  content: '';
+  opacity: 0;
+  width: 10px;
+  height: 10px;
+  margin: auto;
+  border-radius: 50%;
+  background: #75c15b;
+  visibility: visible;
+  transition: 0.22s;
+}
+
+.plan-day-checkbox-checked {
+  opacity: 1;
+}
+
+.plan-day-description-hidden {
+  max-height: 0;
+}
+
+@media (max-width: 768px) {
+  .one-tour-plan {
+    padding: 60px 0;
+  }
+
+  .one-tour-plan-list {
+    gap: 30px;
+  }
+
+  .plan-day-body {
+    padding-left: 50px;
+  }
+
+  .plan-day-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .plan-day-description {
+    font-size: 14px;
+  }
+
+  .plan-day-checkbox {
+    width: 26px;
+    height: 26px;
+  }
+
+  .plan-day-body-arrow {
+    left: 14px;
+    bottom: -50px;
+  }
+}
+
+@media (max-width: 475px) {
+  .one-tour-plan {
+    padding: 40px 0;
+  }
+
+  .one-tour-plan-list {
+    gap: 20px;
+  }
+
+  .plan-day-body {
+    padding-left: 40px;
+  }
+
+  .plan-day-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .plan-day-description {
+    font-size: 12px;
+  }
+
+  .plan-day-checkbox {
+    width: 26px;
+    height: 26px;
+  }
+
+  .plan-day-body-arrow {
+    left: 14px;
+    bottom: -40px;
+  }
+
+  .plan-day-desc-collapse-open {
+    max-height: 450px;
+    animation: collapseOpen 0.7s ease-in;
+  }
+}

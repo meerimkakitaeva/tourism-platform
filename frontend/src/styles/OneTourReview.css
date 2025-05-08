@@ -1,0 +1,193 @@
+.one-tour-reviews-inner {
+  max-width: 750px;
+}
+
+.one-tour-reviews {
+  margin-top: 100px;
+  flex-grow: 1;
+}
+
+.one-tour-average-wrap {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding-bottom: 90px;
+  overflow: hidden;
+}
+
+.one-tour-average-num {
+  max-width: 208px;
+  height: 180px;
+  border-radius: 4px 4px 0 0;
+  background: #ffffff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-size: 25px;
+  line-height: 1.75;
+  color: #000;
+  flex-grow: 1;
+}
+
+.one-tour-average-num h5 {
+  font-size: 45px;
+  line-height: 1;
+  font-weight: 600;
+  color: #75c15b;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+.one-tour-average-num p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.one-tour-average-progress {
+  height: 30px;
+  max-width: 400px;
+  flex-grow: 1;
+  border: 1px solid #808080;
+  background-color: #fff;
+  padding-right: 10px;
+  overflow: hidden;
+}
+
+.one-tour-average-filler {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  transition: width 0.2s ease-in;
+  background: #75c15b;
+  color: #fff;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.one-tour-review-wrap {
+  margin-bottom: 90px;
+}
+
+.one-tour-review-wrap:last-child {
+  border-bottom: 1px solid rgba(196, 196, 196, 0.5);
+}
+
+.one-tour-review {
+  border-top: 1px solid rgba(196, 196, 196, 0.5);
+  padding: 20px 40px;
+}
+
+.one-tour-review h3 {
+  font-size: 28px;
+  line-height: 1.44444;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.one-tour-review-date {
+  font-size: 20px;
+  line-height: 1.44444;
+  color: #808080;
+  margin-bottom: 20px;
+}
+
+.one-tour-review-comment {
+  font-size: 20px;
+  color: #808080;
+}
+
+@media (max-width: 1020px) {
+  .one-tour-reviews {
+    margin-top: 50px;
+  }
+
+  .one-tour-reviews-inner {
+    margin: 0 auto;
+  }
+
+  .one-tour-average-wrap {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 768px) {
+  .one-tour-average-num {
+    max-width: 160px;
+    height: 140px;
+  }
+
+  .one-tour-average-num h5 {
+    margin-top: 28px;
+    font-size: 36px;
+  }
+
+  .one-tour-average-num p {
+    font-size: 16px;
+  }
+
+  .one-tour-average-wrap {
+    gap: 30px;
+    padding-bottom: 50px;
+  }
+
+  .one-tour-review h3 {
+    font-size: 22px;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .one-tour-review {
+    padding: 15px;
+  }
+
+  .one-tour-review-wrap {
+    margin-bottom: 50px;
+  }
+
+  .one-tour-review-date,
+  .one-tour-review-comment {
+    font-size: 16px;
+  }
+
+  .one-tour-review-date {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 475px) {
+  .one-tour-reviews {
+    margin-top: 20px;
+  }
+
+  .one-tour-average-num {
+    max-width: 130px;
+    height: 110px;
+  }
+
+  .one-tour-average-num h5 {
+    margin-top: 20px;
+    font-size: 28px;
+  }
+
+  .one-tour-average-num p,
+  .one-tour-average-filler {
+    font-size: 14px;
+  }
+
+  .one-tour-average-wrap {
+    gap: 15px;
+  }
+
+  .one-tour-review h3 {
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 2px;
+  }
+
+  .one-tour-review-date,
+  .one-tour-review-comment {
+    font-size: 13px;
+  }
+}

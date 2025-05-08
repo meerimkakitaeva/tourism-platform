@@ -1,0 +1,24 @@
+.one-review {
+  padding: 20px 40px;
+  max-width: 500px;
+}
+
+.one-review_name {
+  font-size: 28px;
+  line-height: 1.44444;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.one-review_date {
+  font-size: 20px;
+  line-height: 1.44444;
+  color: #808080;
+  margin-bottom: 20px;
+}
+
+.one-review_comment {
+  font-size: 20px;
+  color: #808080;
+}

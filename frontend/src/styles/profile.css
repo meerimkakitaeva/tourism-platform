@@ -1,0 +1,153 @@
+.profile-page_top {
+  position: relative;
+  height: 400px;
+}
+
+.profile-page_main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(80%);
+}
+
+.profile-page_top-info {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.profile-page_top-line {
+  width: 100px;
+  background-image: url('../assets/images/wave-icon.svg');
+  background-repeat: no-repeat;
+  height: 10px;
+  background-position: center;
+  background-size: 154%;
+}
+
+.profile-page_top-title {
+  color: #ffffff;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 1.24444;
+  text-shadow: 0 4px 4px rgba(21, 21, 21, 0.25);
+  margin-bottom: 0;
+}
+
+.page-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-page_profile {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  gap: 30px;
+  margin: 30px 0;
+  padding: 15px;
+}
+
+.profile-page_img-wrap {
+  padding: 8px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #75c15b;
+}
+
+.profile-page_img {
+  position: relative !important;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.guide-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-page_info {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+}
+
+.profile-page_table {
+  margin: 45px 0;
+  caption-side: bottom;
+  border-collapse: collapse;
+  width: 550px;
+}
+
+.profile-page_table td {
+  border-top: 1px solid #c4c4c4;
+}
+
+.profile-page_table td {
+  padding: 21px 15px;
+}
+
+.profile-page_table td:first-child {
+  padding-left: 0;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.profile-page_table td:last-child {
+  letter-spacing: 2px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile-page_table tr:last-child {
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.guide-input-description {
+  width: 100%;
+  height: 150px;
+  resize: none;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+.language {
+  padding-right: 3px;
+}
+
+@media (max-width: 570px) {
+  .profile-page_table {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .profile-page_profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .page-profile_edit-btn {
+    position: absolute;
+    top: -20px;
+    right: 0;
+  }
+}
