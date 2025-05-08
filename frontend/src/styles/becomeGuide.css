@@ -1,0 +1,40 @@
+.become-guide {
+  padding: 100px 0;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.become-guide-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.become-guide .form-tour-btn {
+  margin: 30px 0 0;
+}
+
+.guide-request-description {
+  position: relative;
+  min-height: 150px;
+  padding: 11px 19px 11px 40px;
+  margin-top: 5px;
+  font-family: 'Montserrat Regular', serif;
+  font-size: 18px;
+  border: 0;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #c4c4c4;
+  outline: 0;
+  background-image: url('../assets/images/pen-icon.svg');
+  background-position: 0 12px;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.guide-request-description::placeholder {
+  letter-spacing: 2px;
+  color: black;
+}
