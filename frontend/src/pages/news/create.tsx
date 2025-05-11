@@ -1,4 +1,4 @@
-creimport React from 'react';
+import React from 'react';
 import PageLoader from '@/components/Loaders/PageLoader';
 import NewsForm from '@/components/Forms/NewsForm/NewsForm';
 import { GetServerSideProps } from 'next';
